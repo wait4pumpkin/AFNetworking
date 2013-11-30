@@ -127,7 +127,7 @@ static char kAFResponseSerializerKey;
     UIImage *cachedImage = [[[self class] af_sharedImageCache] cachedImageForRequest:urlRequest];
     if (cachedImage) {
         if (success) {
-            success(nil, nil, cachedImage);
+            success(request, nil, cachedImage);
         } else {
             self.image = cachedImage;
         }
